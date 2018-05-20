@@ -1,0 +1,226 @@
+{% extends "webapp/header.html" %}
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<p>Apicación de interpolación para calcula la cantidad de poblacion en años donde no hubo censo</p>
+	
+
+
+<table class="table table-striped" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 802px;">
+ <colgroup><col style="mso-width-alt: 2121; mso-width-source: userset; width: 44pt;" width="58">
+ <col style="mso-width-alt: 9654; mso-width-source: userset; width: 198pt;" width="264">
+ <col span="2" style="mso-width-alt: 8777; mso-width-source: userset; width: 180pt;" width="240">
+ </colgroup><tbody>
+<tr height="20" style="height: 15.0pt;">
+  <td class="xl64" height="20" style="height: 15.0pt; width: 44pt;" width="58">Año</td>
+  <td class="xl65" style="border-left: none; width: 198pt;" width="264">Total</td>
+  <td class="xl65" style="border-left: none; width: 180pt;" width="240">Hombres</td>
+  <td class="xl65" style="border-left: none; width: 180pt;" width="240">Mujeres</td>
+ </tr>
+<tr height="20" style="height: 15.0pt;">
+  <td class="xl64" height="20" style="border-top: none; height: 15.0pt; width: 44pt;" width="58">1950</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 198pt;" width="264">25
+  791 017</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">12
+  696 935</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">13
+  094 082</td>
+ </tr>
+<tr height="20" style="height: 15.0pt;">
+  <td class="xl64" height="20" style="border-top: none; height: 15.0pt; width: 44pt;" width="58">1960</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 198pt;" width="264">34
+  923 129</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">17
+  415 320</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">17
+  507 809</td>
+ </tr>
+<tr height="20" style="height: 15.0pt;">
+  <td class="xl64" height="20" style="border-top: none; height: 15.0pt; width: 44pt;" width="58">1970</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 198pt;" width="264">48
+  225 238</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">24
+  065 614</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">24
+  159 624</td>
+ </tr>
+<tr height="20" style="height: 15.0pt;">
+  <td class="xl67" height="20" style="border-top: none; height: 15.0pt; width: 44pt;" width="58">1990&nbsp;</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 198pt;" width="264">81
+  249 645</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">39
+  893 969</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">41
+  355 676</td>
+ </tr>
+<tr height="20" style="height: 15.0pt;">
+  <td class="xl67" height="20" style="border-top: none; height: 15.0pt; width: 44pt;" width="58">1995&nbsp;</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 198pt;" width="264">91
+  158 290</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">44
+  900 499</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">46
+  257 791</td>
+ </tr>
+<tr height="20" style="height: 15.0pt;">
+  <td class="xl67" height="20" style="border-top: none; height: 15.0pt; width: 44pt;" width="58">2000&nbsp;</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 198pt;" width="264">97
+  483 412</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">47
+  592 253</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">49
+  891 159</td>
+ </tr>
+<tr height="20" style="height: 15.0pt;">
+  <td class="xl67" height="20" style="border-top: none; height: 15.0pt; width: 44pt;" width="58">2005&nbsp;</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 198pt;" width="264">103
+  263 388</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">50
+  249 955</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">53
+  013 433</td>
+ </tr>
+<tr height="20" style="height: 15.0pt;">
+  <td class="xl67" height="20" style="border-top: none; height: 15.0pt; width: 44pt;" width="58">2010</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 198pt;" width="264">112
+  336 538</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">54
+  855 231</td>
+  <td class="xl66" style="border-left: none; border-top: none; width: 180pt;" width="240">57
+  481 307</td>
+ </tr>
+</tbody></table>
+
+	<div>
+		<h3>Selecciona un año para interpolar la cantidad de población</h3>
+	</div>
+	<div>
+	<form action="submit" method="post">{% csrf_token %}
+    <input id="datepicker"  type="text" name="info"><br>
+     <script type="text/javascript">
+      $("#datepicker").datepicker({
+    format: "yyyy",
+    viewMode: "years", 
+    minViewMode: "years"
+});
+  </script>
+  </div>
+  <h1> </h1>
+  <div>
+    <input type="submit" value="Submit">
+    </div>
+</form>
+<div>
+	<h1></h1>
+	{% if valuestotal == 'entrada invalida'%}
+	<div class="alert alert-danger" role="alert">
+  	<strong>Error!</strong> Entrada invalida
+	</div>
+	{%elif valuestotal == 'No se puede interpolar:c'%}
+	<div class="alert alert-danger" role="alert">
+  	<strong>Error!</strong> No existen datos para interpolar en año seleccionado
+	</div>
+	{%elif valuestotal is not none%} 
+	<p>En el año {{anioactual}} :</p>
+	<p>La población total era aproximadamente: {{arraylabels}} {{valuestotal}}</p>
+	<p>La población de mujeres era aproximadamente: {{valuesmujeres}}</p>
+	<p>La población de hombres era aproximadamente: {{valueshombres}}</p>
+	<center>
+	<canvas id="myChart" width="400" height="400"></canvas>
+	</center>
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: 
+    {
+    	labels: {{arraylabels}},
+        datasets: [
+        {
+        	data:
+        	[
+        {
+        x: {{anioactual}},y: {{valuestotal}}}
+        ]
+    ,
+    borderColor: "#7f0b0b",
+    pointRadius: 7,
+    label: "Valor total"
+        },
+         {
+        	data:
+        	[
+        
+        {x:{{anioactual}},y: {{valuesmujeres}}}
+        ]
+    ,
+    tooltips: {
+    	title:'ssss'
+    },
+    borderColor: "#7f0b0b",
+    pointRadius: 7,
+    label: "Valor Mujeres"
+        }, {
+        	data:
+        	[
+        
+        {x: {{anioactual}},y: {{valueshombres}}
+        }]
+    ,
+    borderColor: "#7f0b0b",
+    pointRadius: 7,
+    label: "Valor Hombres"
+        },
+
+        { 
+        data: [{x:1950,y:25791017},{x:1960,y:34923129},{x:1970,y:48225238},{x:1990,y:81249645},{x:1995,y:91158290},{x:2000,y:97483412},{x:2005,y:103263388},{x:2010,y:112336538}],
+        label: "Total",
+        pointRadius: 5,
+        borderColor: "#3e95cd",
+        fill: false
+      },{ 
+        data: [{x:1950,y:13094082},{x:1960,y:17507809},{x:1970,y:24159624},{x:1990,y:41355676},{x:1995,y:46257791},{x:2000,y:49891159},{x:2005,y:53013433},{x:2010,y:57481307}],
+        label: "Mujeres",
+        pointRadius: 5,
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [{x:1950,y:12696935},{x:1960,y:17415320},{x:1970,y:24065614},{x:1990,y:39893969},{x:1995,y:44900499},{x:2000,y:47592253},{x:2005,y:50249955},{x:2010,y:54855231}],
+        label: "Hombres",
+        pointRadius: 5,
+        pointBorderColor:"#3cba9f",
+        borderColor: "#3cba9f",
+        fill: false
+      }
+    ]
+  },
+  options: {
+
+  	showLines: false,
+    
+  }
+});
+
+</script>
+
+
+
+	{%endif%} 
+
+
+
+
+
+
+</div>
+
+{% endblock %}
+
+
